@@ -19,9 +19,6 @@ const memoRequests = async (limit = 1, callback, ...urls) => {
                     loadingRequests--;
                     return response.json();
                 })
-                .then(json => {
-                    res.push(json);
-                })
                 .catch(e => {
                     console.log(e);
                 });
